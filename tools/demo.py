@@ -128,6 +128,7 @@ if __name__ == '__main__':
 
     if args.cpu_mode:
         caffe.set_mode_cpu()
+        cfg.USE_GPU_NMS = False
     else:
         caffe.set_mode_gpu()
         caffe.set_device(args.gpu_id)
